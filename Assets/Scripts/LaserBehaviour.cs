@@ -1,19 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LaserBehaviour : MonoBehaviour
+
 {
-    [SerializeField] private float moveSpeed = 500;
-    // Start is called before the first frame update
+
+    [SerializeField] private float moveSpeedLaser = 500;
+
     void Start()
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    }
+    private void Update()
     {
-        transform.position = transform.position + transform.forward * moveSpeed * Time.deltaTime;
+        transform.position = transform.position + transform.forward * moveSpeedLaser * Time.deltaTime;
     }
 }
+
